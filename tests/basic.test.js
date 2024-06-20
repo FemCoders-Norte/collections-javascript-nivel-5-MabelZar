@@ -4,18 +4,22 @@ describe("Colecciones en JS: Array", () => {
     it("Pueden crearse usando [ ]", () => {
 
         // crea un array "a" usando los corchetes []
+        const a=[];
          
         expect(Array.isArray(a)).toBeTruthy();
     });
     it("Pueden crearse usando new Array", () => {
 
         // crea un array "a" usando el constructor "new"
+       const a= new Array();
 
         expect(Array.isArray(a)).toBeTruthy();
     });
     it("Pueden estar vacíos o contener elementos", () => {
 
         // crea un array que esté vacío y otro que no esté vacío
+        const emptyArray=[];
+        const nonEmptyArray=[1,2]
 
         expect(emptyArray).toEqual([]);
         expect(nonEmptyArray).not.toBe([]);
@@ -26,7 +30,7 @@ describe("Colecciones en JS: Array", () => {
 
         // completa la definición que falta en "???" usando la propiedad length
 
-        expect("???").toBe(4);
+        expect(list.length).toBe(4);
     });
     it("Nos permiten acceder a cada elemento del array", () => {
 
@@ -34,14 +38,15 @@ describe("Colecciones en JS: Array", () => {
 
         // sustituye "???" en cada caso para acceder al elemento correspondiente de la lista
 
-        expect("???").toBe("Piña");
-        expect("???").toBe("Melón");
+        expect(fruits[0]).toBe("Piña");
+        expect(fruits[3]).toBe("Melón");
     });
     it("Nos permiten modificar cada elemento", () => {
 
         let fruits = ["Piña", "Manzana", "Fresa", "Melón"]
 
         // Añade el código que permite modificar el elemento correspondiente
+        fruits[1]="Pera";
 
         expect(fruits).toEqual(["Piña", "Pera", "Fresa", "Melón"])
     });
@@ -49,11 +54,12 @@ describe("Colecciones en JS: Array", () => {
         let fruits = ["Piña", "Manzana", "Fresa", "Melón"]
 
         // Añade el código que permite modificar la lista (incluyendo un elemento al final)
+        fruits.push("Pera");
 
         expect(fruits).toEqual(["Piña", "Manzana", "Fresa", "Melón", "Pera"])
     });
 });
-
+//------------------------------------CONTINUAR
 describe("Ejemplos resueltos: Operaciones iterables", () => {
     it("map nos permite realizar operaciones elemento a elemento", () => {
 
