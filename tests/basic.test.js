@@ -131,7 +131,7 @@ describe("Operaciones iterables", () => {
         let list = [1,5,7,9,11,13];
 
         // utiliza la función map para aplicar los números de la lista
-        
+        let result=list.map(n=>n-1);
         expect(result).toEqual([0,4,6,8,10,12]);
     });
     it("map nos permite realizar operaciones elemento a elemento (2)", () => {
@@ -139,7 +139,7 @@ describe("Operaciones iterables", () => {
         let list = ["Pikachu", "Charmander", "Magikarp"];
 
         // utiliza la función map para aplicar los números de la lista y guardar la nueva lista en result
-        
+        let result=list.map(name=> `${name}, te elijo a ti!`);
         expect(result).toEqual([
             "Pikachu, te elijo a ti!",
             "Charmander, te elijo a ti!",
@@ -151,7 +151,7 @@ describe("Operaciones iterables", () => {
         let knownExoplanets = [ "TOI-1298 b","TOI-132 b","TOI-1333 b","TOI-1338 b","TOI-1431 b","TOI-1444 b","TOI-1478 b","TOI-150.01","TOI-157 b","TOI-1601 b","TOI-163 b","TOI-1634 b","TOI-1685 b","TOI-169 b","TOI-172 b","TOI-1728 b","TOI-1749 b","TOI-1749 c"];
 
         // utiliza la función includes para comprobar si la lista de planetas contiene el planeta TOI-1634 b
-        
+        let result=knownExoplanets.includes("TOI-1634 b");
         expect(result).toBeTruthy();        
     });
     it("filtrando planetas", () => {
@@ -163,6 +163,7 @@ describe("Operaciones iterables", () => {
         // p.ej. "Hola".endsWith('a') devuelve true
         
         // todos los planetas de result terminan con la letra c
+        let result=knownExoplanets.filter(p=>p.endsWith("c"));
         expect(result).toBeTruthy();        
     });
 
